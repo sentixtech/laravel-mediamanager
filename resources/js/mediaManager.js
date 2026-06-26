@@ -434,15 +434,23 @@ class MediaManager {
     }
 
     // Selector binding
-    bindSelector(inputName, multiple = false, asset = "") {
-        this.inputNameId = inputName;
-        this.multiple = multiple;
-        this.asset = asset;
+   bindSelector(inputName, multiple = false, asset = "") {
+    this.inputNameId = inputName;
+    this.multiple = multiple;
 
-        const input = $(`#media-${inputName}`);
-        if (!input.length) return;
+    const input = $(`#media-${inputName}`);
 
+    if (!input.length) return;
+
+    if (asset) {
+        this.selectedMediaUrls = Array.isArray(asset)
+            ? asset
+            : asset.split(",").filter(Boolean);
+
+        input.val(this.selectedMediaUrls.join(","));
+    } else {
         let value = input.val();
+
         if (!value) {
             this.selectedMediaUrls = [];
         } else if (Array.isArray(value)) {
@@ -450,9 +458,10 @@ class MediaManager {
         } else {
             this.selectedMediaUrls = value.split(",").filter(Boolean);
         }
-
-        this.selection.renderSelectorPreview();
     }
+
+    this.selection.renderSelectorPreview();
+}
 
     registerSelectorTrigger() {
         $(document)
@@ -499,7 +508,6 @@ class MediaManager {
             elementId,
         );
     }
-  
 }
 
 window.MediaManager = MediaManager;
