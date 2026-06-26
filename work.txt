@@ -1,0 +1,19 @@
+vendor/sentix/media
+
+1. Config/media-manager.php
+2. resources/js/mediaManager.js
+3. resources/views/partials =>[
+    1. modal.blade.php
+    2. select-media.blade.php
+    3. selection-grid.blade.php
+    4. selection-list.blade.php
+]
+4. resources/views/index.blade.php
+5. src/controller/MediaController.php
+6. src/database/2026_02_27_132307_create_media_table.php
+7. src/sentix/Facades/Media.php
+8. src/Models/Media.php
+9. src/Services/ImageProcessService.php
+10. src/Services/MediaService.php
+11. src/Sentix\MediaManagerServiceProvider.php
+12. composer.json
