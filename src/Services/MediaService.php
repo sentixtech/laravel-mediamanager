@@ -101,7 +101,7 @@ class MediaService
         <script src='".asset('vendor/media/js/MediaList.js')."'></script>
         <script src='".asset('vendor/media/js/MediaManager.js')."'></script>
         ";
-
+        
         if ($this->options['autoInit']) {
             $script .= "
             <script>
