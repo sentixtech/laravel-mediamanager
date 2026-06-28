@@ -3,11 +3,11 @@
     "description": "A comprehensive media manager package for Laravel",
     "type": "laravel-package",
     "license": "MIT",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "authors": [
         {
             "name": "Sentix",
-            "email": "your-email@example.com"
+            "email": "shambishnoi75@gmail.com"
         }
     ],
     "require": {
