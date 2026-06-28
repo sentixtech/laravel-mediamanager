@@ -95,11 +95,11 @@ class MediaService
         <script>
             window.MediaManagerConfig = '.json_encode($this->options).";
         </script>
-        <script src='".asset('vendor/media/js/mediaUI.js')."'></script>
-        <script src='".asset('vendor/media/js/mediaUpload.js')."'></script>
-        <script src='".asset('vendor/media/js/mediaSelection.js')."'></script>
-        <script src='".asset('vendor/media/js/mediaList.js')."'></script>
-        <script src='".asset('vendor/media/js/mediaManager.js')."'></script>
+        <script src='".asset('vendor/media/js/MediaUI.js')."'></script>
+        <script src='".asset('vendor/media/js/MediaUpload.js')."'></script>
+        <script src='".asset('vendor/media/js/MediaSelection.js')."'></script>
+        <script src='".asset('vendor/media/js/MediaList.js')."'></script>
+        <script src='".asset('vendor/media/js/MediaManager.js')."'></script>
         ";
 
         if ($this->options['autoInit']) {
